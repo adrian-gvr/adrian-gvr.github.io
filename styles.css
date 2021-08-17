@@ -15,10 +15,10 @@ body {
 .container{
   position:relative;
   /*width:280px;*/
-  width: 750px;
+  width: auto;
   height:380px;
   /*background:#040404;*/
-  background: #17268a; /*colore_sfondo*/
+  background: #3d5183; /*colore_sfondo*/
   box-shadow:0 15px 18px rgba(179,179,179,.6);
   display:flex;
   flex-direction:column;
@@ -27,11 +27,12 @@ body {
   overflow:hidden;
   z-index:-1;
   font-size:.9rem;
+  border-radius: 5px;
 }
 .profile-pic{
   width:100px;
   height:100px;
-  background:url("Image/logo_adrian_pagina_facebook.jpg") 0 1px / cover;
+  background:url("Image/foto_di_me_sull_altare_della_patria.jpeg") 0 1px / cover;
   border-radius:50%;
   border:3px solid #fff;
 }
