@@ -57,6 +57,9 @@ body {
   opacity:0;
   transition:.4s ease;
 }
+.skills a:hover{
+  padding-right: 20px;
+}
 .fa-html5{
   color:#e34c26;
 }
