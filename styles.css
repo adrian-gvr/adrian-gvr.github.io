@@ -1,24 +1,25 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
+
 .main-container{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
 }
 .container{
-  position:relative;
-  /*width:280px;*/
-  width: 300px;
-  height:380px;
-  /*background:#040404;*/
-  background: #3d5183; /*colore_sfondo*/
+  position: relative;
+  width:308px;
+  height: 500px;
+  background: #3d5183;
   box-shadow:0 15px 18px rgba(179,179,179,.6);
   display:flex;
   flex-direction:column;
@@ -29,13 +30,7 @@ body {
   font-size:.9rem;
   border-radius: 5px;
 }
-.profile-pic{
-  width:100px;
-  height:100px;
-  background:url("Image/foto_di_me_sull_altare_della_patria.jpeg") 0 1px / cover;
-  border-radius:50%;
-  border:3px solid #fff;
-}
+
 .layer{
   position:absolute;
   top:21%;
@@ -46,6 +41,10 @@ body {
   z-index:-1;
   overflow:hidden;
 }
+.container:hover .layer{
+  height:100%;
+}
+
 .details{
   text-align:center;
   color:#fff;
@@ -54,22 +53,87 @@ body {
 .details h1{
   font-weight: bold;
 }
+.container:hover .details{
+  color:#040404;
+}
+.container:hover .btn{
+  opacity:0;
+}
+
+.container:hover .btn a{
+  border-color:#040404;
+  color:#040404;
+}
+
 .skills{
   font-size:1.5rem;
+}
+.skills_linguaggi{
+  opacity:0;
 }
 .skills i{
   margin:0 .3rem;
   opacity:0;
   transition:.4s ease;
 }
-.skills a:hover{
-  padding-right: 20px;
+.container:hover .skills_linguaggi{
+  opacity: 1;
 }
+.container:hover .skills i{
+  opacity:1;
+}
+
+.social{
+  font-size:1.5rem;
+}
+.social_media{
+  opacity:0;
+}
+.social i{
+  margin:0 .3rem;
+  opacity:0;
+}
+.container:hover .social_media{
+  opacity:1;
+}
+.container:hover .social i{
+  opacity:1;
+}
+
+.formInsert{
+  margin:0 .3rem;
+  opacity:0;
+  transition:.4s ease;
+}
+.formInsert textarea{
+  font-family: "Helvetica", "Arial", sans-serif;
+ font-size: 14px;
+
+ border: 1px solid #D6D9DC;
+ border-radius: 3px;
+
+ min-height: 200px;
+ min-width: 270px;
+
+ resize: none;
+}
+.container:hover .formInsert{
+  opacity: 1;
+}
+
+.profile-pic{
+  width:100px;
+  height:100px;
+  background:url("Image/foto_di_me_sull_altare_della_patria.jpeg") 0 1px / cover;
+  border-radius:50%;
+  border:3px solid #fff;
+}
+
 .fa-html5{
   color:#e34c26;
 }
-.fa-css3-alt{
-  color:#0098ff;
+.fa-css{
+  color:#4B97D0;
 }
 .fa-js{
   color:#f0db4f;
@@ -77,8 +141,11 @@ body {
 .fa-react{
   color:#61dafb;
 }
-.fa-angular{
-  color:#dd1b16;
+.fa-node{
+  color:#679D5A;
+}
+.fa.database{
+  color: #112A4D;
 }
 .btn a{
   display:block;
@@ -93,16 +160,7 @@ body {
   letter-spacing:2px;
   transition:.4s ease;
 }
-.container:hover .layer{
-  height:100%;
-}
-.container:hover .details{
-  color:#040404;
-}
-.container:hover .btn a{
-  border-color:#040404;
-  color:#040404;
-}
-.container:hover .skills i{
-  opacity:1;
+
+.legacy-form-row{
+  border: none;
 }
